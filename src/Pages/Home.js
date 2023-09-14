@@ -1,12 +1,9 @@
-import { Route } from "react-router-dom"
-
-function Home() {
+export default function Home() {
   return (
-    <div>
-      <h2>Home page</h2>
-      {/* Add your movie-related content here */}
+    <div className="content">
+      <h1>Welcome...</h1>
+      <p>Quality Clothing for Quality Ninjas</p>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima animi nulla eveniet. At non consequuntur perferendis id voluptatem sapiente dolor animi exercitationem, commodi officiis eveniet laudantium quidem dolore labore sit.</p>
     </div>
-  );
+  )
 }
-
-export default Home;

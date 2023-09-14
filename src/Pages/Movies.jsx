@@ -1,12 +1,9 @@
-import { Route } from "react-router-dom"
-
-function Movies() {
+const Movies = () => {
   return (
-    <div>
-      <h2>Movies Page</h2>
-      {/* Add your movie-related content here */}
+    <div className="movie">
+      <h2>MOVIES</h2>
     </div>
   );
 }
-
+ 
 export default Movies;

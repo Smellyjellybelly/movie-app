@@ -1,6 +1,7 @@
 import React from 'react';
 import { Cinema, Movie } from '../Interface/interface';
 
+
 const Movies = () => {
   return (
     <div className="movie">

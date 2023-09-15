@@ -5,6 +5,7 @@ import Navbar from './Navbar';
 import Home from './Pages/Home';
 import About from './Pages/About';
 import Movies from './Pages/Movies';
+import Search from './Pages/Search';
 
 import './App.css';
 
@@ -23,6 +24,9 @@ function App() {
             </Route>
             <Route path="/Pages/About">
               <About />
+            </Route>
+            <Route path="/Pages/Search">
+              <Search />
             </Route>
           </Switch>
         </div>

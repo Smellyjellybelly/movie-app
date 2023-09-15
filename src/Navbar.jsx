@@ -6,6 +6,7 @@ const Navbar = () => {
                 <a href="/">Home</a>
                 <a href="/Pages/Movies">Movies</a>
                 <a href="/Pages/About">About</a>
+                <a href="/Pages/Search">Search</a>
 
             </div>
         </nav>

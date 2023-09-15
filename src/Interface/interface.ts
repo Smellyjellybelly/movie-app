@@ -1,4 +1,4 @@
-interface RootObject {
+export interface RootObject {
   cinema: Cinema;
 }
 

@@ -5,7 +5,7 @@ import Navbar from './Navbar';
 import Home from './Pages/Home';
 import About from './Pages/About';
 import Movies from './Pages/Movies';
-import Search from './Pages/Search';
+import CinemaSearch from './Pages/Search';
 
 import './App.css';
 
@@ -26,7 +26,7 @@ function App() {
               <About />
             </Route>
             <Route path="/Pages/Search">
-              <Search />
+              <CinemaSearch />
             </Route>
           </Switch>
         </div>

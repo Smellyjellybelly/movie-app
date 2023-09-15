@@ -5,6 +5,7 @@
         {
           "title": "Movie A",
           "duration": "120 mins",
+          "picture": "/Assets/12.jpg",
           "shows": [
             {
               "time": "2023-09-07T16:00:00.000Z",
@@ -30,6 +31,7 @@
         {
           "title": "Movie B",
           "duration": "100 mins",
+          "picture": "/Assets/12.jpg",
           "shows": [
             {
               "time": "2023-09-07T15:00:00.000Z",
@@ -44,11 +46,13 @@
         {
           "title": "Movie C",
           "duration": "140 mins",
+          "picture": "/Assets/12.jpg",
           "shows": []
         },
         {
           "title": "Movie D",
           "duration": "110 mins",
+          "picture": "/Assets/12.jpg",
           "shows": [
             {
               "time": "2023-09-07T17:00:00.000Z",
@@ -63,6 +67,7 @@
         {
           "title": "Movie E",
           "duration": "90 mins",
+          "picture": "/Assets/12.jpg",
           "shows": [
             {
               "time": "2023-09-07T18:00:00.000Z",

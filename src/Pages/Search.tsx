@@ -1,7 +1,7 @@
 import React, { useState, useEffect, ChangeEvent } from 'react';
 
 // Import your interface definitions
-import { RootObject, Movie, Cinema } from '../Interface/interface'; // Replace with the correct path to your interface file
+import { RootObject, Movie, Cinema } from '../Interface/interface'; 
 
 function CinemaSearch() {
     const [cinemaData, setCinemaData] = useState<Cinema | null>(null);

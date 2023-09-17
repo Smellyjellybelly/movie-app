@@ -2,7 +2,8 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { Cinema, Movie } from '../Interface/interface';
 import JsonData from '../movies.json';
-import Movies from './Movies';
+import MovieItem from '../Items/MovieItem';
+import ShowList from '../Items/showList';
 
 const MovieDetails = () => {
     type MovieParams = {
@@ -10,7 +11,10 @@ const MovieDetails = () => {
       };
     const { id }:MovieParams = useParams<MovieParams>();
     const data: Cinema = JsonData.cinema;
-    const movie: Movie | undefined = data.movies.find(movie => Movies.id === parseInt(id,10));
+    const movie: Movie | undefined = data.movies.find(currentMovie => currentMovie.id === parseInt(id, 10));
+    // console.log("Id", id);
+    // console.log("data", data);
+    // console.log("movie", movie);
 
   if (!movie) {
     return <div>Movie not found</div>;
@@ -20,8 +24,12 @@ const MovieDetails = () => {
     // console.log("test", id);
     return (
         <div className="movie-details">
-        <h2>movie details - {id}</h2>
+        <h2>movie details</h2>
+        <MovieItem movie={movie}/>
+        <ShowList movie={movie} />
         </div>
+
+
     );
 }
 

@@ -3,7 +3,7 @@
       "name": "CinemaWorld",
       "movies": [
         {
-          "id": 1,
+          "id": 0,
           "title": "Blood for Dracula",
           "duration": "1t 43m",
           "picture": "/Assets/blood.jpg",
@@ -32,7 +32,7 @@
           ]
         },
         {
-          "id": 2,
+          "id": 1,
           "title": "Flesh for Frankenstein",
           "duration": "1t 35m",
           "picture": "/Assets/flesh.jpg",
@@ -49,14 +49,14 @@
           ]
         },
         {
-          "id": 3,
+          "id": 2,
           "title": "Dancer in the Dark",
           "duration": "2t 20m",
           "picture": "/Assets/dancer.jpg",
           "shows": []
         },
         {
-          "id": 4,
+          "id": 3,
           "title": "Ace Ventura: Pet Detective",
           "duration": "1t 26m",
           "picture": "/Assets/ace.jpg",
@@ -73,7 +73,7 @@
           ]
         },
         {
-          "id": 5,
+          "id": 4,
           "title": "Blade",
           "duration": "2t",
           "picture": "/Assets/blade.jpg",
@@ -93,42 +93,42 @@
           ]
         },
         {
-          "id": 6,
+          "id": 5,
           "title": "The Lords of Salem",
           "duration": "1t 41m",
           "picture": "/Assets/lords.jpg",
           "shows": []
         },
         {
-          "id": 7,
+          "id": 6,
           "title": "Melancholia",
           "duration": "2t 15m",
           "picture": "/Assets/melan.jpg",
           "shows": []
         },
         {
-          "id": 8,
+          "id": 7,
           "title": "Mark of the Devil",
           "duration": "1t 37m",
           "picture": "/Assets/mark.jpg",
           "shows": []
         },
         {
-          "id": 9,
+          "id": 8,
           "title": "Trauma",
           "duration": "1t 24m",
           "picture": "/Assets/trauma.jpg",
           "shows": []
         },
         {
-          "id": 10,
+          "id": 9,
           "title": "Suspiria",
           "duration": "1t 39m",
           "picture": "/Assets/sus.jpg",
           "shows": []
         },
         {
-          "id": 11,
+          "id": 10,
           "title": "Shadow of the Vampire",
           "duration": "1t 32m",
           "picture": "/Assets/shadow.jpg",

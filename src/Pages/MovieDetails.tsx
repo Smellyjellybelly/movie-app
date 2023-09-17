@@ -11,7 +11,7 @@ const MovieDetails = () => {
       };
     const { id }:MovieParams = useParams<MovieParams>();
     const data: Cinema = JsonData.cinema;
-    const movie: Movie | undefined = data.movies.find(currentMovie => currentMovie.id === parseInt(id, 10));
+    const movie: Movie | undefined = data.movies.find(currentMovie => currentMovie.id === parseInt(id));
     // console.log("Id", id);
     // console.log("data", data);
     // console.log("movie", movie);

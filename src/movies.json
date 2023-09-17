@@ -3,9 +3,9 @@
       "name": "CinemaWorld",
       "movies": [
         {
-          "title": "Movie A",
-          "duration": "120 mins",
-          "picture": "/Assets/12.jpg",
+          "title": "Blood for Dracula",
+          "duration": "1t 43m",
+          "picture": "/Assets/blood.jpg",
           "shows": [
             {
               "time": "2023-09-07T16:00:00.000Z",
@@ -29,9 +29,9 @@
           ]
         },
         {
-          "title": "Movie B",
-          "duration": "100 mins",
-          "picture": "/Assets/12.jpg",
+          "title": "Flesh for Frankenstein",
+          "duration": "1t 35m",
+          "picture": "/Assets/flesh.jpg",
           "shows": [
             {
               "time": "2023-09-07T15:00:00.000Z",
@@ -44,15 +44,15 @@
           ]
         },
         {
-          "title": "Movie C",
-          "duration": "140 mins",
-          "picture": "/Assets/12.jpg",
+          "title": "Dancer in the Dark",
+          "duration": "2t 20m",
+          "picture": "/Assets/dancer.jpg",
           "shows": []
         },
         {
-          "title": "Movie D",
-          "duration": "110 mins",
-          "picture": "/Assets/12.jpg",
+          "title": "Ace Ventura: Pet Detective",
+          "duration": "1t 26m",
+          "picture": "/Assets/ace.jpg",
           "shows": [
             {
               "time": "2023-09-07T17:00:00.000Z",
@@ -65,9 +65,9 @@
           ]
         },
         {
-          "title": "Movie E",
-          "duration": "90 mins",
-          "picture": "/Assets/12.jpg",
+          "title": "Blade",
+          "duration": "2t",
+          "picture": "/Assets/blade.jpg",
           "shows": [
             {
               "time": "2023-09-07T18:00:00.000Z",
@@ -81,6 +81,42 @@
               ]
             }
           ]
+        },
+        {
+          "title": "The Lords of Salem",
+          "duration": "1t 41m",
+          "picture": "/Assets/lords.jpg",
+          "shows": []
+        },
+        {
+          "title": "Melancholia",
+          "duration": "2t 15m",
+          "picture": "/Assets/melan.jpg",
+          "shows": []
+        },
+        {
+          "title": "Mark of the Devil",
+          "duration": "1t 37m",
+          "picture": "/Assets/mark.jpg",
+          "shows": []
+        },
+        {
+          "title": "Trauma",
+          "duration": "1t 24m",
+          "picture": "/Assets/trauma.jpg",
+          "shows": []
+        },
+        {
+          "title": "Suspiria",
+          "duration": "1t 39m",
+          "picture": "/Assets/sus.jpg",
+          "shows": []
+        },
+        {
+          "title": "Shadow of the Vampire",
+          "duration": "1t 32m",
+          "picture": "/Assets/shadow.jpg",
+          "shows": []
         }
       ]
     }

@@ -6,6 +6,7 @@ import Home from './Pages/Home';
 import About from './Pages/About';
 import Movies from './Pages/Movies';
 import CinemaSearch from './Pages/Search';
+import MovieDetails from './Pages/MovieDetails';
 
 import './App.css';
 
@@ -19,13 +20,15 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
-            <Route path="/Pages/Movies">
+            <Route exact path="/Movies">
               <Movies />
             </Route>
-            <Route path="/Pages/About">
+            {/* <Route path="/MovieDetails" component={MovieDetails}/> */}
+            <Route exact path="/movies/:id" component={MovieDetails} />
+            <Route path="/About">
               <About />
             </Route>
-            <Route path="/Pages/Search">
+            <Route path="/Search">
               <CinemaSearch />
             </Route>
           </Switch>

@@ -8,6 +8,7 @@ export interface Cinema {
 }
 
 export interface Movie {
+  id: number;
   title: string;
   duration: string;
   shows: Show[];
@@ -15,6 +16,7 @@ export interface Movie {
 }
 
 export interface Show {
+  id: number;
   time: string;
   room: string;
   seats: Seat[];

@@ -11,3 +11,40 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.movie ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie-item {
+  margin: 15px 25px;
+  width: 350px;
+  height: 475px;
+  background-color: #21201E;
+  color: #6C6D71;
+  border-radius: 15px;
+  background: #21201E;
+  box-shadow: 0px 4px 20px 0px rgba(217, 217, 217, 0.07);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.movie-item img {
+  width: 216.354px;
+  height: 325px;
+  border-radius: 5px;
+  margin-top: 30px;
+  background: lightgray 50% / cover no-repeat;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.movie-item h3 {
+  margin-top: 10px;
+}
+
+.movie-item p {
+  margin-top: 0px;
+}

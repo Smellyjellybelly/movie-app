@@ -48,3 +48,23 @@ code {
 .movie-item p {
   margin-top: 0px;
 }
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 10px;
+}
+
+.search input {
+  margin-top: 20px;
+  width: 300px;
+  height: 40px;
+  font-size: 20px;
+}
+
+.search-res p {
+  margin: 10px;
+  font-size: 18px;
+}

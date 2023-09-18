@@ -4,6 +4,7 @@ import JsonData from '../movies.json';
 import MovieItem from '../Items/MovieItem';
 import { withRouter, RouteComponentProps } from 'react-router-dom'; // Import withRouter and RouteComponentProps
 
+
 const data: Cinema = JsonData.cinema;
 
 interface MoviesProps extends RouteComponentProps {
@@ -22,7 +23,9 @@ const Movies: React.FC<MoviesProps> = ({ history }) => {
       <ul>
         {data.movies.map((movie, index) => (
           <li key={index} onClick={() => handleMovieItemClick(index)}>
+            
             <MovieItem movie={movie} />
+            
           </li>
         ))}
       </ul>

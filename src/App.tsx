@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, } from 'react-router-dom';
 
 import Navbar from './Navbar';
 import Home from './Pages/Home';
@@ -12,7 +12,7 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
+    <Router forceRefresh={true}>
       <div className="App">
         <Navbar />
         <div className="content">
@@ -23,8 +23,9 @@ function App() {
             <Route exact path="/Movies">
               <Movies />
             </Route>
-            {/* <Route path="/MovieDetails" component={MovieDetails}/> */}
-            <Route exact path="/movies/:id" component={MovieDetails} />
+            <Route exact path="/Movies/:id">
+              <MovieDetails />
+            </Route>
             <Route path="/About">
               <About />
             </Route>

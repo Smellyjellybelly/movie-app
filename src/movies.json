@@ -10,8 +10,8 @@
           "shows": [
             {
               "id": 0,
-              "time": "2023-09-07T16:00:00.000Z",
-              "room": "Room 1",
+              "time": "Måndagar, 18.00",
+              "room": "Kammaren",
               "seats": [
                 {"seatNumber": "A1", "booked": false},
                 {"seatNumber": "A2", "booked": true},
@@ -22,8 +22,8 @@
             },
             {
               "id": 1,
-              "time": "5:00 PM",
-              "room": "Room 2",
+              "time": "Torsdagar, 20.00",
+              "room": "Salongen",
               "seats": [
                 {"seatNumber": "B1", "booked": false},
                 {"seatNumber": "B2", "booked": true}
@@ -39,11 +39,23 @@
           "shows": [
             {
               "id": 0,
-              "time": "2023-09-07T15:00:00.000Z",
-              "room": "Room 3",
+              "time": "tisdagar, 18.00",
+              "room": "Fläcken",
               "seats": [
                 {"seatNumber": "C1", "booked": true},
                 {"seatNumber": "C2", "booked": false}
+              ]
+            },
+            {
+              "id": 0,
+              "time": "Måndagar, 18.00",
+              "room": "Kammaren",
+              "seats": [
+                {"seatNumber": "A1", "booked": false},
+                {"seatNumber": "A2", "booked": true},
+                {"seatNumber": "A3", "booked": false},
+                {"seatNumber": "A4", "booked": false},
+                {"seatNumber": "A5", "booked": false}
               ]
             }
           ]
@@ -53,7 +65,32 @@
           "title": "Dancer in the Dark",
           "duration": "2t 20m",
           "picture": "/Assets/dancer.jpg",
-          "shows": []
+          "shows": [
+            {
+              "id": 0,
+              "time": "Måndagar, 18.00",
+              "room": "Kammaren",
+              "seats": [
+                {"seatNumber": "A1", "booked": false},
+                {"seatNumber": "A2", "booked": true},
+                {"seatNumber": "A3", "booked": false},
+                {"seatNumber": "A4", "booked": false},
+                {"seatNumber": "A5", "booked": false}
+              ]
+            },
+            {
+              "id": 0,
+              "time": "Måndagar, 18.00",
+              "room": "Kammaren",
+              "seats": [
+                {"seatNumber": "A1", "booked": false},
+                {"seatNumber": "A2", "booked": true},
+                {"seatNumber": "A3", "booked": true},
+                {"seatNumber": "A4", "booked": false},
+                {"seatNumber": "A5", "booked": false}
+              ]
+            }
+          ]
         },
         {
           "id": 3,
@@ -63,11 +100,26 @@
           "shows": [
             {
               "id": 0,
-              "time": "2023-09-07T17:00:00.000Z",
-              "room": "Room 2",
+              "time": "Onsdagar, 18.00",
+              "room": "Fläcken",
               "seats": [
                 {"seatNumber": "D1", "booked": false},
                 {"seatNumber": "D2", "booked": false}
+              ]
+            },
+            {
+              "id": 0,
+              "time": "Måndagar, 18.00",
+              "room": "Salongen",
+              "seats": [
+                {"seatNumber": "A1", "booked": false},
+                {"seatNumber": "A2", "booked": true},
+                {"seatNumber": "A3", "booked": false},
+                {"seatNumber": "A4", "booked": false},
+                {"seatNumber": "A5", "booked": false},
+                {"seatNumber": "A6", "booked": false},
+                {"seatNumber": "A7", "booked": false},
+                {"seatNumber": "A8", "booked": false}
               ]
             }
           ]
@@ -80,8 +132,43 @@
           "shows": [
             {
               "id": 0,
-              "time": "2023-09-07T18:00:00.000Z",
-              "room": "Room 1",
+              "time": "Torsdagar, 18.00",
+              "room": "Kammaren",
+              "seats": [
+                {"seatNumber": "A1", "booked": false},
+                {"seatNumber": "A2", "booked": true},
+                {"seatNumber": "A3", "booked": false},
+                {"seatNumber": "A4", "booked": false},
+                {"seatNumber": "A5", "booked": false},
+                {"seatNumber": "A6", "booked": true}
+              ]
+            },
+            {
+              "id": 0,
+              "time": "Måndagar, 18.00",
+              "room": "Kammaren",
+              "seats": [
+                {"seatNumber": "A1", "booked": false},
+                {"seatNumber": "A2", "booked": true},
+                {"seatNumber": "A3", "booked": false},
+                {"seatNumber": "A4", "booked": false},
+                {"seatNumber": "A5", "booked": false},
+                {"seatNumber": "A7", "booked": false},
+                {"seatNumber": "A8", "booked": false}
+              ]
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "The Lords of Salem",
+          "duration": "1t 41m",
+          "picture": "/Assets/lords.jpg",
+          "shows": [
+            {
+              "id": 0,
+              "time": "Måndagar, 18.00",
+              "room": "Fläcken",
               "seats": [
                 {"seatNumber": "A1", "booked": false},
                 {"seatNumber": "A2", "booked": true},
@@ -93,46 +180,116 @@
           ]
         },
         {
-          "id": 5,
-          "title": "The Lords of Salem",
-          "duration": "1t 41m",
-          "picture": "/Assets/lords.jpg",
-          "shows": []
-        },
-        {
           "id": 6,
           "title": "Melancholia",
           "duration": "2t 15m",
           "picture": "/Assets/melan.jpg",
-          "shows": []
+          "shows": [
+            {
+              "id": 0,
+              "time": "Måndagar, 18.00",
+              "room": "Salongen",
+              "seats": [
+                {"seatNumber": "A1", "booked": false},
+                {"seatNumber": "A2", "booked": true},
+                {"seatNumber": "A3", "booked": false},
+                {"seatNumber": "A4", "booked": false},
+                {"seatNumber": "A5", "booked": false}
+              ]
+            }
+          ]
         },
         {
           "id": 7,
           "title": "Mark of the Devil",
           "duration": "1t 37m",
           "picture": "/Assets/mark.jpg",
-          "shows": []
+          "shows": [
+            {
+              "id": 0,
+              "time": "Måndagar, 18.00",
+              "room": "Kammaren",
+              "seats": [
+                {"seatNumber": "A1", "booked": false},
+                {"seatNumber": "A2", "booked": true},
+                {"seatNumber": "A3", "booked": false},
+                {"seatNumber": "A4", "booked": false},
+                {"seatNumber": "A5", "booked": false}
+              ]
+            }
+          ]
         },
         {
           "id": 8,
           "title": "Trauma",
           "duration": "1t 24m",
           "picture": "/Assets/trauma.jpg",
-          "shows": []
+          "shows": [
+            {
+              "id": 0,
+              "time": "Måndagar, 18.00",
+              "room": "Fläcken",
+              "seats": [
+                {"seatNumber": "A1", "booked": false},
+                {"seatNumber": "A2", "booked": true},
+                {"seatNumber": "A3", "booked": false},
+                {"seatNumber": "A4", "booked": false},
+                {"seatNumber": "A5", "booked": false}
+              ]
+            }
+          ]
         },
         {
           "id": 9,
           "title": "Suspiria",
           "duration": "1t 39m",
           "picture": "/Assets/sus.jpg",
-          "shows": []
+          "shows": [
+            {
+              "id": 0,
+              "time": "Måndagar, 18.00",
+              "room": "Kammaren",
+              "seats": [
+                {"seatNumber": "A1", "booked": false},
+                {"seatNumber": "A2", "booked": true},
+                {"seatNumber": "A3", "booked": false},
+                {"seatNumber": "A4", "booked": false},
+                {"seatNumber": "A5", "booked": false}
+              ]
+            }
+          ]
         },
         {
           "id": 10,
           "title": "Shadow of the Vampire",
           "duration": "1t 32m",
           "picture": "/Assets/shadow.jpg",
-          "shows": []
+          "shows": [
+            {
+              "id": 0,
+              "time": "Måndagar, 18.00",
+              "room": "Kammaren",
+              "seats": [
+                {"seatNumber": "A1", "booked": false},
+                {"seatNumber": "A2", "booked": true},
+                {"seatNumber": "A3", "booked": false},
+                {"seatNumber": "A4", "booked": false},
+                {"seatNumber": "A5", "booked": false}
+              ]
+            },
+            {
+              "id": 0,
+              "time": "Måndagar, 18.00",
+              "room": "Salongen",
+              "seats": [
+                {"seatNumber": "A1", "booked": false},
+                {"seatNumber": "A2", "booked": true},
+                {"seatNumber": "A3", "booked": false},
+                {"seatNumber": "A4", "booked": false},
+                {"seatNumber": "A5", "booked": false}
+              ]
+            }
+          ]
         }
       ]
     }

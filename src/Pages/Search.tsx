@@ -13,7 +13,7 @@ function CinemaSearch() {
         <div className="search">
             <input type="text" placeholder='Sök' onChange={event => { setSearchTerm(event.target.value) }} />
             {data.movies.filter((movies) => {
-                if (searchTerm == ""){
+                if (searchTerm === ""){
                 return movies
             } else if (movies.title.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())) {
                 return movies

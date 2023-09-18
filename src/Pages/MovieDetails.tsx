@@ -6,6 +6,7 @@ import MovieItem from '../Items/MovieItem';
 import ShowList from '../Items/showList';
 
 
+
 const MovieDetails = () => {
   type MovieParams = {
     id: string;
@@ -29,6 +30,7 @@ const MovieDetails = () => {
         <h2>movie details</h2>
         <MovieItem movie={movie} />
         <ShowList movie={movie} />
+
       </div>
    
 

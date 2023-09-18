@@ -23,9 +23,7 @@ const Movies: React.FC<MoviesProps> = ({ history }) => {
       <ul>
         {data.movies.map((movie, index) => (
           <li key={index} onClick={() => handleMovieItemClick(index)}>
-            
             <MovieItem movie={movie} />
-            
           </li>
         ))}
       </ul>

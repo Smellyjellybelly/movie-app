@@ -7,6 +7,8 @@ import About from './Pages/About';
 import Movies from './Pages/Movies';
 import CinemaSearch from './Pages/Search';
 import MovieDetails from './Pages/MovieDetails';
+import Showing from './Items/Shows';
+
 
 import './App.css';
 
@@ -26,6 +28,9 @@ function App() {
             <Route exact path="/Movies/:id">
               <MovieDetails />
             </Route>
+          <Route path="/Booking">
+            <Showing />
+          </Route>
             <Route path="/About">
               <About />
             </Route>

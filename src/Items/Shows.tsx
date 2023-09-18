@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Cinema, Show, Seat } from '../Interface/interface';
 import JsonData from '../movies.json';
-import { useHistory } from 'react-router-dom';
+
 
 const data: Cinema = JsonData.cinema;
 

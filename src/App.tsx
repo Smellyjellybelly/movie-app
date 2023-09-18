@@ -8,6 +8,7 @@ import Movies from './Pages/Movies';
 import CinemaSearch from './Pages/Search';
 import MovieDetails from './Pages/MovieDetails';
 import Showing from './Items/Shows';
+import Booking from './Pages/Booking';
 
 
 import './App.css';
@@ -28,14 +29,17 @@ function App() {
             <Route exact path="/Movies/:id">
               <MovieDetails />
             </Route>
-          <Route path="/Booking">
-            <Showing />
-          </Route>
+            <Route path="/Showing">
+              <Showing />
+            </Route>
             <Route path="/About">
               <About />
             </Route>
             <Route path="/Search">
               <CinemaSearch />
+            </Route>
+            <Route path="/Booking/:id">
+              <Booking />
             </Route>
           </Switch>
         </div>

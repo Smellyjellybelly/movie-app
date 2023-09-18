@@ -47,19 +47,23 @@ code {
 }
 
 .movie-item h3 {
-  margin-top: 10px;
+  margin-top: 30px;
+  font-size: 25px;
 }
 
 .movie-item p {
   margin-top: 0px;
 }
 
-.search {
+
+
+.search-con {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  /* justify-content: center;
+  align-items: center; */
+  flex-direction: row;
   padding-left: 10px;
+  flex-wrap: wrap;
 }
 
 .search input {
@@ -75,13 +79,15 @@ code {
 }
 
 .search-res img {
-  width: 300px;
+  width: 216.354px;
+  height: 325px;
+  border-radius: 5px;
+  margin-left: 15px;
   margin-top: 30px;
+  background: lightgray 50% / cover no-repeat;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-.booking {
- 
-}
 
 .movie-show {
   list-style: none;
@@ -89,12 +95,17 @@ code {
   flex-direction: row;
   flex-wrap: wrap;
   margin: 30px;
- 
-  /* flex-wrap: wrap; */
+  
 }
 .movie-show li {
   flex: 1;
   padding-right: 30px;
+  
+}
+
+.movie-show li ul {
+  list-style: none;
+  padding-inline-start: 0px;
 }
 
 .movie-show img {
@@ -104,4 +115,8 @@ code {
   margin-top: 30px;
   background: lightgray 50% / cover no-repeat;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.show-list {
+  padding-left: 30px;
 }

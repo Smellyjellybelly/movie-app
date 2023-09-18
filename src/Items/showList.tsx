@@ -1,12 +1,11 @@
-// src/Components/ShowList.tsx
-
 import React from 'react';
 import { MovieItemProps, Show } from '../Interface/interface';
 
 const ShowList: React.FC<MovieItemProps> = ({ movie }) => {
     return (
-        <div>
+        <div className='show-list'>
             <h3>Visning av {movie.title}</h3>
+           <p>Beskrivning: {movie.description}</p>
             <ul>
                 {movie.shows.map((show: Show) => (
                     <li key={show.id}>

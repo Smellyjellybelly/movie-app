@@ -1,31 +1,56 @@
+import React, { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 import { Cinema } from '../Interface/interface';
 import JsonData from '../movies.json';
-import React from 'react';
-import { useState } from 'react';
 
 const data: Cinema = JsonData.cinema;
 
 function CinemaSearch() {
+    const [searchTerm, setSearchTerm] = useState('');
+    const [filteredMovies, setFilteredMovies] = useState(data.movies);
+    const history = useHistory();
 
-    const [searchTerm, setSearchTerm] = useState('')
+    useEffect(() => {
+        const filterMovies = () => {
+            if (searchTerm === "") {
+                setFilteredMovies(data.movies);
+            } else {
+                const filtered = data.movies.filter((movie) =>
+                    movie.title.toLowerCase().includes(searchTerm.toLowerCase())
+                );
+                setFilteredMovies(filtered);
+            }
+        };
+
+        filterMovies();
+    }, [searchTerm]);
+
+    const navigateToMovieDetails = (index: number) => {
+        history.push(`/Movies/${index}`); // Use the same route as in the Movies component
+    };
 
     return (
         <div className="search">
-            <input type="text" placeholder='Sök' onChange={event => { setSearchTerm(event.target.value) }} />
-            {data.movies.filter((movies) => {
-                if (searchTerm === ""){
-                return movies
-            } else if (movies.title.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())) {
-                return movies
-            }
-            }).map((movies) => {
-                return <div className='search-res'>
-                    <img src={movies.picture} alt="" />
-                    <p>{movies.title}</p>
-                </div>
-            })}
+            <input
+                type="text"
+                placeholder='Sök'
+                value={searchTerm}
+                onChange={event => { setSearchTerm(event.target.value) }}
+            />
+            <div className='search-con'>
+                {filteredMovies.map((movie, index) => (
+                    <div
+                        className='search-res'
+                        key={index}
+                        onClick={() => navigateToMovieDetails(index)}
+                    >
+                        <img src={movie.picture} alt={movie.title} />
+                        <p>{movie.title}</p>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 }
 
-export default CinemaSearch
+export default CinemaSearch;

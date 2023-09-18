@@ -11,7 +11,6 @@ const MovieItem: React.FC<MovieItemProps> = ({ movie }) => {
         <div className="movie-item">
           <img src={movie.picture} alt={movie.title} />
           <h3>{movie.title}</h3>
-          <p>{movie.duration}</p>
         </div>
   );
 }

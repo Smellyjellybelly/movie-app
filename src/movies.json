@@ -7,6 +7,7 @@
           "title": "Blood for Dracula",
           "duration": "1t 43m",
           "picture": "/Assets/blood.jpg",
+          "description": "Udo Kier är Dracula, som i den här filmen enbart kan dricka oskulders blod. Dricker han orent blod spyr han i bakdar. Eftersom alla oskulder har tagit slut i Transylvanien, tar han pick, pack och kista och åker till Italien. Där slår de sig ned på ett stort gods vars ägare (utmärkt spelad av legendariska regissören Vittorio de Sica, som gjorde cykeltjuven) har en uppsättning unga, vackra döttrar. Nu råkar förstås den pilska gårdskarlen ha varit på de flesta av töserna, vilket innebär att det spys en del i badkar. Filmen är så otroligt vacker och vemodig, samtidigt som den är rätt rolig och blodig. Foto och miljö är enastående.",
           "shows": [
             {
               "id": 0,
@@ -36,6 +37,7 @@
           "title": "Flesh for Frankenstein",
           "duration": "1t 35m",
           "picture": "/Assets/flesh.jpg",
+          "description": "",
           "shows": [
             {
               "id": 0,
@@ -65,6 +67,7 @@
           "title": "Dancer in the Dark",
           "duration": "2t 20m",
           "picture": "/Assets/dancer.jpg",
+          "description": "",
           "shows": [
             {
               "id": 0,
@@ -97,6 +100,7 @@
           "title": "Ace Ventura: Pet Detective",
           "duration": "1t 26m",
           "picture": "/Assets/ace.jpg",
+          "description": "",
           "shows": [
             {
               "id": 0,
@@ -129,6 +133,7 @@
           "title": "Blade",
           "duration": "2t",
           "picture": "/Assets/blade.jpg",
+          "description": "",
           "shows": [
             {
               "id": 0,
@@ -164,6 +169,7 @@
           "title": "The Lords of Salem",
           "duration": "1t 41m",
           "picture": "/Assets/lords.jpg",
+          "description": "",
           "shows": [
             {
               "id": 0,
@@ -184,6 +190,7 @@
           "title": "Melancholia",
           "duration": "2t 15m",
           "picture": "/Assets/melan.jpg",
+          "description": "",
           "shows": [
             {
               "id": 0,
@@ -204,6 +211,7 @@
           "title": "Mark of the Devil",
           "duration": "1t 37m",
           "picture": "/Assets/mark.jpg",
+          "description": "",
           "shows": [
             {
               "id": 0,
@@ -224,6 +232,7 @@
           "title": "Trauma",
           "duration": "1t 24m",
           "picture": "/Assets/trauma.jpg",
+          "description": "",
           "shows": [
             {
               "id": 0,
@@ -244,6 +253,7 @@
           "title": "Suspiria",
           "duration": "1t 39m",
           "picture": "/Assets/sus.jpg",
+          "description": "",
           "shows": [
             {
               "id": 0,
@@ -264,6 +274,7 @@
           "title": "Shadow of the Vampire",
           "duration": "1t 32m",
           "picture": "/Assets/shadow.jpg",
+          "description": "",
           "shows": [
             {
               "id": 0,

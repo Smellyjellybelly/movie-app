@@ -13,6 +13,7 @@ export interface Movie {
   duration: string;
   shows: Show[];
   picture: string;
+  description: string;
 }
 
 export interface Show {

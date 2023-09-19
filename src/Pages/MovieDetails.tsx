@@ -25,14 +25,15 @@ const MovieDetails = () => {
   //   const movie = data.movies[id];
   // console.log("test", id);
   return (
-  
-      <div className="movie-details">
-        <h2>movie details</h2>
+
+    <div className="movie-details">
+      <h2>Film-info</h2>
+      <div className='md-cont'>
         <MovieItem movie={movie} />
         <ShowList movie={movie} />
-
       </div>
-   
+    </div>
+
 
   );
 }

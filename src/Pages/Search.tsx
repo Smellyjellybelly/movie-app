@@ -31,12 +31,14 @@ function CinemaSearch() {
 
     return (
         <div className="search">
-            <input
-                type="text"
-                placeholder='Sök'
-                value={searchTerm}
-                onChange={event => { setSearchTerm(event.target.value) }}
-            />
+            <div className='input-cont'>
+                <input
+                    type="text"
+                    placeholder='Sök'
+                    value={searchTerm}
+                    onChange={event => { setSearchTerm(event.target.value) }}
+                />
+            </div>
             <div className='search-con'>
                 {filteredMovies.map((movie, index) => (
                     <div

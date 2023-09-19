@@ -5,7 +5,7 @@ const ShowList: React.FC<MovieItemProps> = ({ movie }) => {
     return (
         <div className='show-list'>
             <h3>Visning av {movie.title}</h3>
-           <p>Beskrivning: {movie.description}</p>
+            <p>Beskrivning: {movie.description}</p>
             <ul>
                 {movie.shows.map((show: Show) => (
                     <li key={show.id}>

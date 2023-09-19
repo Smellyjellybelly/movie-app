@@ -40,7 +40,7 @@ const Showing = () => {
                   <p>Visning: {show.time}</p>
                   <p>Rum: {show.room}</p>
                   <p>Lediga platser: {getAvailableSeatCount(show)}</p>
-                  <Link to={`/Booking/${show.id}`}>Boka</Link>
+                  <Link to={`/Booking/${show.id}`}> <button className='boka'>Boka</button> </Link>
                 </li>
               ))}
             </ul>

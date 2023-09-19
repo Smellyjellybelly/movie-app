@@ -39,7 +39,6 @@ const Booking = () => {
     <div className="booking">
       <h2>Booking for {show.room}</h2>
       {Seating(show.seats)}
-      {/* Add your booking content here */}
     </div>
   );
 };

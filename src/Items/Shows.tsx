@@ -1,8 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { Cinema, Show, Seat } from '../Interface/interface';
 import JsonData from '../movies.json';
-
 
 const data: Cinema = JsonData.cinema;
 
@@ -19,9 +18,25 @@ export const findShowById = (showId: number): Show | undefined => {
 };
 
 const Showing = () => {
+  const [selectedShowIds, setSelectedShowIds] = useState<string[]>(Array(data.movies.length).fill(''));
+  const history = useHistory();
+
   const getAvailableSeatCount = (show: Show) => {
     if (!show || !show.seats) return 0;
     return show.seats.filter((seat: Seat) => !seat.booked).length;
+  };
+
+  const redirectToBooking = (movieIndex: number) => {
+    const selectedShowId = selectedShowIds[movieIndex];
+    if (selectedShowId) {
+      history.push(`/Booking/${selectedShowId}`);
+    }
+  };
+
+  const handleShowSelect = (e: React.ChangeEvent<HTMLSelectElement>, movieIndex: number) => {
+    const newSelectedShowIds = [...selectedShowIds];
+    newSelectedShowIds[movieIndex] = e.target.value;
+    setSelectedShowIds(newSelectedShowIds);
   };
 
   return (
@@ -34,16 +49,19 @@ const Showing = () => {
             <h3>{movie.title}</h3>
             <p>Duration: {movie.duration}</p>
             <h4>Shows:</h4>
-            <ul>
+            <select
+              id={`showSelector-${index}`}
+              onChange={(e) => handleShowSelect(e, index)}
+              value={selectedShowIds[index]}
+            >
+              <option value="">Select a show</option>
               {movie.shows.map((show, showIndex) => (
-                <li key={showIndex}>
-                  <p>Visning: {show.time}</p>
-                  <p>Rum: {show.room}</p>
-                  <p>Lediga platser: {getAvailableSeatCount(show)}</p>
-                  <Link to={`/Booking/${show.id}`}> <button className='boka'>Boka</button> </Link>
-                </li>
+                <option key={showIndex} value={show.id}>
+                  Visning: {show.time}, Rum: {show.room}, Lediga platser: {getAvailableSeatCount(show)}
+                </option>
               ))}
-            </ul>
+            </select>
+            <button onClick={() => redirectToBooking(index)}>Boka</button>
           </li>
         ))}
       </ul>

@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route, Switch, } from 'react-router-dom';
 import Navbar from './Navbar';
 import Home from './Pages/Home';
 import About from './Pages/About';
-import Movies from './Pages/Movies';
 import CinemaSearch from './Pages/Search';
 import MovieDetails from './Pages/MovieDetails';
 import Showing from './Items/Shows';
@@ -22,9 +21,6 @@ function App() {
           <Switch>
             <Route exact path="/">
               <Home />
-            </Route>
-            <Route exact path="/Movies">
-              <Movies />
             </Route>
             <Route exact path="/Movies/:id">
               <MovieDetails />

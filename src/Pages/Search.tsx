@@ -1,30 +1,35 @@
 import React, { useState, useEffect } from 'react';
+// useHistory is a hook that is used to manage the navigation history
 import { useHistory } from 'react-router-dom';
 import { Cinema } from '../Interface/interface';
 import JsonData from '../movies.json';
 
+// Assign movie data from JSON to 'data'
 const data: Cinema = JsonData.cinema;
 
 function CinemaSearch() {
-    const [searchTerm, setSearchTerm] = useState('');
-    const [filteredMovies, setFilteredMovies] = useState(data.movies);
-    const history = useHistory();
+    const [searchTerm, setSearchTerm] = useState(''); // State for the search term
+    const [filteredMovies, setFilteredMovies] = useState(data.movies); // State for filtered movies
+    const history = useHistory(); // Access the navigation history using useHistory hook
 
     useEffect(() => {
+        // Define a function to filter movies based on search term
         const filterMovies = () => {
             if (searchTerm === "") {
                 setFilteredMovies(data.movies);
             } else {
+                // Filter movies based on search term (case-insensitive)
                 const filtered = data.movies.filter((movie) =>
                     movie.title.toLowerCase().includes(searchTerm.toLowerCase())
                 );
-                setFilteredMovies(filtered);
+                setFilteredMovies(filtered); // Update the filtered movies state
             }
         };
 
-        filterMovies();
-    }, [searchTerm]);
+        filterMovies();// Call the filterMovies function when the searchTerm changes
+    }, [searchTerm]); // Run this effect whenever 'searchTerm' changes
 
+     // Function to navigate to movie details page when a movie is clicked
     const navigateToMovieDetails = (index: number) => {
         history.push(`/Movies/${index}`); // Use the same route as in the Movies component
     };
@@ -40,6 +45,7 @@ function CinemaSearch() {
                 />
             </div>
             <div className='search-con'>
+                {/* Map through the filtered movies and display them */}
                 {filteredMovies.map((movie, index) => (
                     <div
                         className='search-res'

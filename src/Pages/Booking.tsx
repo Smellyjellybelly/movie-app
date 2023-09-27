@@ -32,15 +32,15 @@ const Booking = () => {
 
   const handleBooking = () => {
     if (!show) {
-      setBookingMessage("Show not found.");
+      setBookingMessage("Visning inte hittad.");
       return;
     }
   
     if (selectedSeats.length === 0) {
-      setBookingMessage("You haven't selected any seats.");
+      setBookingMessage("Du har inte valt någon plats/platser.");
     } else {
       const selectedSeatNumbers = selectedSeats.map(seatIndex => show.seats[seatIndex].seatNumber);
-      setBookingMessage(`You have selected the following seats: ${selectedSeatNumbers.join(', ')}`);
+      setBookingMessage(`Du har valt följande plats/platser: ${selectedSeatNumbers.join(', ')}`);
       setPurchaseComplete(true); // Set purchaseComplete to true
     }
   };

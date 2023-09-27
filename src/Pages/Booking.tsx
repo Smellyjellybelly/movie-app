@@ -1,65 +1,74 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Cinema, Show } from '../Interface/interface';
 import JsonData from '../movies.json';
+import SeatList from '../Items/SeatList';
 
 const data: Cinema = JsonData.cinema;
 
 const Booking = () => {
-  // gets the id from the URL using useParams
   const { id } = useParams<{ id: string }>();
-  const showId = parseInt(id, 10); // converts id to an integer
+  const showId = parseInt(id, 10);
 
-  // find the show data based on the showid parameter
   const show: Show | undefined = data.movies
-    .flatMap(movie => movie.shows) // Flatten the nested 'shows' arrays
-    .find(show => show.id === showId); // Find the show with the matching 'showId'
+    .flatMap(movie => movie.shows)
+    .find(show => show.id === showId);
 
-  // If the show is not found, display a message
-  if (!show) {
-    return <div>Show not found</div>;
-  }
+  const [selectedSeats, setSelectedSeats] = useState<number[]>([]);
+  const [bookingMessage, setBookingMessage] = useState<string | null>(null);
 
-  // Function to toggle the selection of a seat when it's clicked
-  const toggleSeatSelection = (event: React.MouseEvent<HTMLLIElement>) => {
-    const seatElement = event.currentTarget;
-    const seatIndex = parseInt(seatElement.getAttribute('data-seat-index') || '', 10);
+  const toggleSeatSelection = (seatIndex: number) => {
+    setSelectedSeats(prevSelectedSeats => {
+      if (prevSelectedSeats.includes(seatIndex)) {
+        return prevSelectedSeats.filter(seat => seat !== seatIndex);
+      } else {
+        return [...prevSelectedSeats, seatIndex];
+      }
+    });
+  };
 
-    // Check if 'seatIndex' is NaN (not a number)
-    if (isNaN(seatIndex)) {
-      return; // Exit the function if 'seatIndex' is not valid
+  const [purchaseComplete, setPurchaseComplete] = useState(false);
+
+
+  const handleBooking = () => {
+    if (!show) {
+      setBookingMessage("Show not found.");
+      return;
     }
-
-    // Check if the seat is booked
-    const isBooked = show.seats[seatIndex].booked;
-
-        // If the seat is not booked, toggle the 'selected-seat' class to change its appearance
-    if (!isBooked) {
-      // Toggle the class
-      seatElement.classList.toggle('selected-seat');
+  
+    if (selectedSeats.length === 0) {
+      setBookingMessage("You haven't selected any seats.");
+    } else {
+      const selectedSeatNumbers = selectedSeats.map(seatIndex => show.seats[seatIndex].seatNumber);
+      setBookingMessage(`You have selected the following seats: ${selectedSeatNumbers.join(', ')}`);
+      setPurchaseComplete(true); // Set purchaseComplete to true
     }
   };
+  
 
   return (
     <div className="booking">
-      <h2>Bokning av {show.room}</h2>
-      <div>
-        <h3>Lediga Stolar:</h3>
-        <ul>
-          {show.seats.map((seat, index) => (
-            <li
-              key={index}
-              className={`seat ${seat.booked ? 'booked-seat' : 'available-seat'}`}
-              data-seat-index={index}
-              onClick={toggleSeatSelection}
-            >
-              Plats {seat.seatNumber} - {seat.booked ? 'Booked' : 'Available'}
-              <button>Boka</button>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
+    {show && (
+      <>
+        <h2>Bokning av {show.room}</h2>
+        <div>
+          <h3>Lediga Stolar:</h3>
+          <SeatList show={show} selectedSeats={selectedSeats} toggleSeatSelection={toggleSeatSelection} />
+          <div>
+            <button onClick={handleBooking}>Boka</button>
+            {bookingMessage && <p>{bookingMessage}</p>}
+          </div>
+          {purchaseComplete && (
+            <div>
+              <button onClick={() => alert('Tack för ditt köp!')}>Köp</button>
+            </div>
+          )}
+        </div>
+      </>
+    )}
+    {!show && <div>Show not found</div>}
+  </div>
+  
   );
 };
 

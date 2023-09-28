@@ -17,7 +17,7 @@ const SeatList: React.FC<SeatListProps> = ({ show, selectedSeats, toggleSeatSele
           data-seat-index={index}
           onClick={() => !seat.booked && toggleSeatSelection(index)} // Handle click only if seat is not booked
         >
-          Plats {seat.seatNumber} - {seat.booked ? 'Booked' : 'Available'}
+          Plats {seat.seatNumber} - {seat.booked ? 'Bokad' : 'Ledig'}
           <input
             type="checkbox"
             checked={selectedSeats.includes(index)}

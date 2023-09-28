@@ -47,14 +47,14 @@ const Showing = () => {
           <li key={index}>
             <img src={movie.picture} alt="" />
             <h3>{movie.title}</h3>
-            <p>Duration: {movie.duration}</p>
-            <h4>Shows:</h4>
+            <p>Längd: {movie.duration}</p>
+            <h4>Visningar:</h4>
             <select
               id={`showSelector-${index}`}
               onChange={(e) => handleShowSelect(e, index)}
               value={selectedShowIds[index]}
             >
-              <option value="">Select a show</option>
+              <option value="">Välj en visning</option>
               {movie.shows.map((show, showIndex) => (
                 <option key={showIndex} value={show.id}>
                   Visning: {show.time}, Rum: {show.room}, Lediga platser: {getAvailableSeatCount(show)}

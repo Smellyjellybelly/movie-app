@@ -54,7 +54,7 @@ const Booking = () => {
         <div>
           <h3>Lediga Stolar:</h3>
           <SeatList show={show} selectedSeats={selectedSeats} toggleSeatSelection={toggleSeatSelection} />
-          <div>
+          <div className='booking-btn'>
             <button onClick={handleBooking}>Boka</button>
             {bookingMessage && <p>{bookingMessage}</p>}
           </div>
@@ -66,7 +66,7 @@ const Booking = () => {
         </div>
       </>
     )}
-    {!show && <div>Show not found</div>}
+    {!show && <div>Visning inte hittad</div>}
   </div>
   
   );

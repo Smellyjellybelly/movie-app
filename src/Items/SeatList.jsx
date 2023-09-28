@@ -1,13 +1,6 @@
 import React from 'react';
-import { Show } from '../Interface/interface';
 
-interface SeatListProps {
-  show: Show;
-  selectedSeats: number[];
-  toggleSeatSelection: (seatIndex: number) => void;
-}
-
-const SeatList: React.FC<SeatListProps> = ({ show, selectedSeats, toggleSeatSelection }) => {
+const SeatList = ({ show, selectedSeats, toggleSeatSelection }) => {
   return (
     <ul>
       {show.seats.map((seat, index) => (

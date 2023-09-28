@@ -1,23 +1,21 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { Cinema, Show } from '../Interface/interface';
-import JsonData from '../movies.json';
 import SeatList from '../Items/SeatList';
 
-const data: Cinema = JsonData.cinema;
-
-const Booking = () => {
-  const { id } = useParams<{ id: string }>();
+const Booking = ({ cinemaData }) => {
+  const { id } = useParams();
   const showId = parseInt(id, 10);
 
-  const show: Show | undefined = data.movies
+  // Assuming 'data' comes from your fetched JSON data in App.js
+  const show = cinemaData.movies
     .flatMap(movie => movie.shows)
     .find(show => show.id === showId);
 
-  const [selectedSeats, setSelectedSeats] = useState<number[]>([]);
-  const [bookingMessage, setBookingMessage] = useState<string | null>(null);
+  const [selectedSeats, setSelectedSeats] = useState([]);
+  const [bookingMessage, setBookingMessage] = useState(null);
+  const [purchaseComplete, setPurchaseComplete] = useState(false);
 
-  const toggleSeatSelection = (seatIndex: number) => {
+  const toggleSeatSelection = seatIndex => {
     setSelectedSeats(prevSelectedSeats => {
       if (prevSelectedSeats.includes(seatIndex)) {
         return prevSelectedSeats.filter(seat => seat !== seatIndex);
@@ -26,9 +24,6 @@ const Booking = () => {
       }
     });
   };
-
-  const [purchaseComplete, setPurchaseComplete] = useState(false);
-
 
   const handleBooking = () => {
     if (!show) {
@@ -44,7 +39,6 @@ const Booking = () => {
       setPurchaseComplete(true); // Set purchaseComplete to true
     }
   };
-  
 
   return (
     <div className="booking">
@@ -68,7 +62,6 @@ const Booking = () => {
     )}
     {!show && <div>Visning inte hittad</div>}
   </div>
-  
   );
 };
 

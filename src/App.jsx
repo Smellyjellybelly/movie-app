@@ -17,7 +17,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('../public/movies.json');
+        const response = await fetch('/movies.json');
         console.log(response);
         console.log(response.ok);
         if (!response.ok) {

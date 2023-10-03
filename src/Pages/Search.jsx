@@ -3,15 +3,16 @@ import { useHistory } from 'react-router-dom';
 
 const CinemaSearch = ({ cinemaData }) => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [filteredMovies, setFilteredMovies] = useState(cinemaData.movies); // Use cinemaData.movies here
+  const [filteredMovies, setFilteredMovies] = useState(cinemaData?.movies || []);
   const history = useHistory();
 
   useEffect(() => {
     const filterMovies = () => {
+      if (!cinemaData || !cinemaData.cinema.movies) return 
       if (searchTerm === "") {
-        setFilteredMovies(cinemaData.movies); // Use cinemaData.movies here
+        setFilteredMovies(cinemaData.cinema.movies); 
       } else {
-        const filtered = cinemaData.movies.filter((movie) => // Use cinemaData.movies here
+        const filtered = cinemaData.cinema.movies.filter((movie) => 
           movie.title.toLowerCase().includes(searchTerm.toLowerCase())
         );
         setFilteredMovies(filtered);
@@ -19,7 +20,7 @@ const CinemaSearch = ({ cinemaData }) => {
     };
 
     filterMovies();
-  }, [searchTerm, cinemaData]); // Add cinemaData to the dependency array
+  }, [searchTerm, cinemaData]); 
 
   const navigateToMovieDetails = (index) => {
     history.push(`/Movies/${index}`);

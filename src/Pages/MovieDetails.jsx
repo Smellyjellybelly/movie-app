@@ -8,7 +8,7 @@ const MovieDetails = ({ cinemaData }) => {
   const { id } = useParams();
 
   // Assuming 'data' comes from your fetched JSON data in App.js
-  const movie = cinemaData.movies.find(currentMovie => currentMovie.id === parseInt(id));
+  const movie = cinemaData.cinema.movies.find(currentMovie => currentMovie.id === parseInt(id));
 
   // If the movie is not found, display a message
   if (!movie) {

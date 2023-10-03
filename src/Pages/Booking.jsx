@@ -7,7 +7,7 @@ const Booking = ({ cinemaData }) => {
   const showId = parseInt(id, 10);
 
   // Assuming 'data' comes from your fetched JSON data in App.js
-  const show = cinemaData.movies
+  const show = cinemaData.cinema.movies
     .flatMap(movie => movie.shows)
     .find(show => show.id === showId);
 
